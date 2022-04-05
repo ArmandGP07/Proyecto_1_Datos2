@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
+#include <QMessageBox>
 
 //Clase de la ventana principal //
 namespace Ui {
@@ -23,12 +24,17 @@ public:
     QTimer *timer = new QTimer();
     //Reloj//
     QTime time;
+    //Cantidad de parejas restantes//
+    int parejasRestantes;
+    //Mensaje por si el usuario pierde el juego//
+    QMessageBox msgBox;
 
 //Modificador de acceso para cronómetro funcional//
 private slots:
    void actualizarEstado();
    void actualizarCronometro();
    void definirResultadoFinal();
+   void inicializarJuego();
 
 private:
     //Objeto que controla la interfaz gráfica//
