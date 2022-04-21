@@ -1,0 +1,3 @@
+D:/U/SEMESTRE V/Algoritmos y Estructuras de Datos II/Proyecto_1_Datos_2/Proyecto_1_Datos_2/cmake-build-debug/CMakeFiles/Proyecto_1_Datos_2.dir
+D:/U/SEMESTRE V/Algoritmos y Estructuras de Datos II/Proyecto_1_Datos_2/Proyecto_1_Datos_2/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/U/SEMESTRE V/Algoritmos y Estructuras de Datos II/Proyecto_1_Datos_2/Proyecto_1_Datos_2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
