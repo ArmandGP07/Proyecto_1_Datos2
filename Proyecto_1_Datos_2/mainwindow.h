@@ -11,10 +11,11 @@
 #include <QMessageBox>
 #include <random>
 
-
 namespace Ui {
     class MainWindow;
 }
+
+class QLocalSocket;
 
 class MainWindow : public QMainWindow{
     Q_OBJECT
@@ -48,10 +49,37 @@ private slots:
     void definirResultadoFinal();
     void actualizarEstado();
     void inicializarJuego();
+    void on_conectar_clicked();
+    void on_desconectar_clicked();
 
+    void on_tarjeta01_clicked();
+
+    void on_tarjeta12_clicked();
+
+    void on_tarjeta02_clicked();
+
+    void on_tarjeta03_clicked();
+
+    void on_tarjeta04_clicked();
+
+    void on_tarjeta05_clicked();
+
+    void on_tarjeta06_clicked();
+
+    void on_tarjeta07_clicked();
+
+    void on_tarjeta08_clicked();
+
+    void on_tarjeta09_clicked();
+
+    void on_tarjeta10_clicked();
+
+    void on_tarjeta11_clicked();
 
 private:
     Ui::MainWindow *ui;
+    QLocalSocket *mSocket;
+
 };
 
 

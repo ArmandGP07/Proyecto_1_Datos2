@@ -13,6 +13,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
@@ -42,6 +43,10 @@ public:
     QPushButton *tarjeta12;
     QPushButton *tarjeta02;
     QPushButton *tarjeta08;
+    QPushButton *conectar;
+    QPushButton *desconectar;
+    QLineEdit *nombreServidor;
+    QLabel *labelServidor;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
 
@@ -49,7 +54,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 600);
+        MainWindow->resize(802, 674);
         MainWindow->setStyleSheet(QString::fromUtf8("#centralWidget {\n"
 "background-image: url(://fondo.png);\n"
 "}\n"
@@ -144,12 +149,28 @@ public:
         tarjeta08 = new QPushButton(frame);
         tarjeta08->setObjectName(QString::fromUtf8("tarjeta08"));
         tarjeta08->setGeometry(QRect(500, 160, 131, 111));
+        conectar = new QPushButton(centralWidget);
+        conectar->setObjectName(QString::fromUtf8("conectar"));
+        conectar->setGeometry(QRect(304, 610, 80, 21));
+        desconectar = new QPushButton(centralWidget);
+        desconectar->setObjectName(QString::fromUtf8("desconectar"));
+        desconectar->setGeometry(QRect(394, 610, 80, 21));
+        nombreServidor = new QLineEdit(centralWidget);
+        nombreServidor->setObjectName(QString::fromUtf8("nombreServidor"));
+        nombreServidor->setGeometry(QRect(334, 580, 113, 21));
+        labelServidor = new QLabel(centralWidget);
+        labelServidor->setObjectName(QString::fromUtf8("labelServidor"));
+        labelServidor->setGeometry(QRect(340, 550, 101, 20));
         MainWindow->setCentralWidget(centralWidget);
         frame->raise();
         instrucciones->raise();
         cronometro->raise();
         puntuacion->raise();
         lblPuntaje->raise();
+        conectar->raise();
+        desconectar->raise();
+        nombreServidor->raise();
+        labelServidor->raise();
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
@@ -181,6 +202,9 @@ public:
         tarjeta12->setText(QString());
         tarjeta02->setText(QString());
         tarjeta08->setText(QString());
+        conectar->setText(QApplication::translate("MainWindow", "Conectar", nullptr));
+        desconectar->setText(QApplication::translate("MainWindow", "Desconectar", nullptr));
+        labelServidor->setText(QApplication::translate("MainWindow", "Nombre del servidor", nullptr));
     } // retranslateUi
 
 };

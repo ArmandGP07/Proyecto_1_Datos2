@@ -1,10 +1,16 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QLocalSocket>
+#include <QTextStream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow){
     ui->setupUi(this);
+    mSocket = new QLocalSocket(this);
+    connect(mSocket, &QLocalSocket::readyRead, [&] () {
+        QTextStream T(mSocket);
+    });
 
     //Connect timer to the slot that will handle the timer
     connect(timer, SIGNAL(timeout()), this, SLOT(actualizarEstado()));
@@ -188,6 +194,90 @@ void MainWindow::repartir(QVector<QString> &tarjetas, QHash<QString, QString> &r
     }
 }
 
+void MainWindow::on_conectar_clicked()
+{
+    mSocket->connectToServer(ui->nombreServidor->text());
+}
+
+
+void MainWindow::on_desconectar_clicked()
+{
+    close();
+}
+
 MainWindow::~MainWindow(){
     delete ui;
 }
+
+
+void MainWindow::on_tarjeta01_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta02_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta03_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta04_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta05_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta06_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta07_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta08_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta09_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta10_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta11_clicked()
+{
+
+}
+
+
+void MainWindow::on_tarjeta12_clicked()
+{
+
+}
+

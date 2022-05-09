@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>802</width>
+    <height>674</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -291,11 +291,64 @@ border-radius: 7px;
      </property>
     </widget>
    </widget>
+   <widget class="QPushButton" name="conectar">
+    <property name="geometry">
+     <rect>
+      <x>304</x>
+      <y>610</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Conectar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="desconectar">
+    <property name="geometry">
+     <rect>
+      <x>394</x>
+      <y>610</y>
+      <width>80</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Desconectar</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="nombreServidor">
+    <property name="geometry">
+     <rect>
+      <x>334</x>
+      <y>580</y>
+      <width>113</width>
+      <height>21</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelServidor">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>550</y>
+      <width>101</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nombre del servidor</string>
+    </property>
+   </widget>
    <zorder>frame</zorder>
    <zorder>instrucciones</zorder>
    <zorder>cronometro</zorder>
    <zorder>puntuacion</zorder>
    <zorder>lblPuntaje</zorder>
+   <zorder>conectar</zorder>
+   <zorder>desconectar</zorder>
+   <zorder>nombreServidor</zorder>
+   <zorder>labelServidor</zorder>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
